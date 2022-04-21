@@ -6,9 +6,6 @@
 }
 
 .main-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -16,5 +13,14 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 50%;
+  width: 100%;
+}
+
+.main-content h1 {
+  margin: 0 8rem 8rem 0;
+}
+
+.main-content section {
+  color: blue;
 }
 /*# sourceMappingURL=style.css.map */

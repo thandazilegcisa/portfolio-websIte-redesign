@@ -5,8 +5,14 @@
 }
 
 .main-content{
-    display: flex;
     justify-content: center;
     align-items: center;
     padding: 50%;
+    width: 100%;
+    h1{
+        margin: 0 8rem 8rem 0;
+    }
+    section{
+        color:blue;
+    }
 }
