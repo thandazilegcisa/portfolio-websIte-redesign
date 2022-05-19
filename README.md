@@ -1,1 +1,3 @@
-# portfolio-WebsIte_v.02
+# Portfolio Re-design
+
+A re-design and development of my portfolio website. Coming Soon!!!
