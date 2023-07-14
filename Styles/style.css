@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ede2d5;
+}
+
+/* Pre-Loader*/
+
+.overlay-container-black {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+
+.load-overlay-container {
+  position: absolute;
+  z-index: 99;
+  width: 2.5vmax;
+  height: 2.5px;
+  background-color: #ede2d5;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Main Content  */
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../Assets/Fonts/Neue-Montreal/OTF/PPNeueMontreal-Medium.otf");
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../Assets/Fonts/Bebas-Neue/BebasNeue-Regular.otf");
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../Assets/Fonts/Satoshi/Satoshi-Regular.otf");
+}
+
+#main-content {
+  overflow-x: hidden;
+}
+
+#name,
+#lastName,
+#description-dev {
+  font-size: 0px;
+  font-family: "Neue Montreal";
+
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  width: 60vw;
+}
+
+.letterElement {
+  font-family: "Neue Montreal";
+  font-size: 10rem;
+}
+
+#name,
+#description {
+  position: relative;
+  overflow: hidden;
+}
+
+#lastName {
+  position: relative;
+  left: 38%;
+  overflow: hidden;
+}
+
+#description-dev {
+  position: relative;
+  left: 30%;
+  overflow-x: hidden;
+}
