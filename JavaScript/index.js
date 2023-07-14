@@ -51,14 +51,19 @@ tl.to(overlayContainer, {
 // ! Todo: Generate random colour upon mouseenter
 // ? Place the colours that i want in an array and cycle through that array
 
+let colousArray = ["#FEBC00", "#C95B00", "#0B1915", "#3EA88E", "#BAE7AE"];
+
 const textSpan = document.querySelectorAll(".letterElement");
-textSpan.forEach(function (el) {
-  el.addEventListener("mouseenter", () => {
-    el.style.cursor = "pointer";
-    el.style.color = "red";
+textSpan.forEach((e) => {
+  e.addEventListener("mouseenter", () => {
+    const rndmIndex = Math.floor(Math.random() * colousArray.length) + 1;
+    const rndmColour = colousArray[rndmIndex];
+
+    e.style.cursor = "pointer";
+    e.style.color = `${rndmColour}`;
   });
 
-  el.addEventListener("mouseout", () => {
-    el.style.color = "black";
+  e.addEventListener("mouseout", () => {
+    e.style.color = "black";
   });
 });
