@@ -1,7 +1,12 @@
 "use strict";
 
+// ! My Variables:
+
 const overlayContainer = document.querySelector(".load-overlay-container");
 const overlayBlack = document.querySelector(".overlay-container-black");
+const counterElement = document.querySelector(".counter-element");
+const mainContent = document.querySelector("#main-content");
+
 const tl = gsap.timeline();
 
 function runLoader() {
@@ -10,16 +15,23 @@ function runLoader() {
   function upadateLoader() {
     if (initCounter === 100) return;
 
+    if (initCounter < 100) {
+      mainContent.style.display = "none";
+    }
+
     initCounter += Math.floor(Math.random() * 10) + 1;
 
     if (initCounter > 100) {
       initCounter = 100;
-    }
 
-    const delay = Math.floor(Math.random() * 325) + 25;
-    console.log(initCounter);
+      if (initCounter === 100) {
+        mainContent.style.display = "block";
+      }
+    }
+    const delay = Math.floor(Math.random() * 325) + 50;
 
     overlayContainer.style.width = `${initCounter}vw`;
+    counterElement.textContent = `${initCounter}%`;
     setTimeout(upadateLoader, delay);
   }
 
@@ -64,6 +76,6 @@ textSpan.forEach((e) => {
   });
 
   e.addEventListener("mouseout", () => {
-    e.style.color = "black";
+    e.style.color = "#676B67";
   });
 });

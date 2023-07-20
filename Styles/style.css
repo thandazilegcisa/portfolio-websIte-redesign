@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../Assets/Fonts/Neue-Montreal/OTF/PPNeueMontreal-Medium.otf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,19 +11,31 @@
 
 html,
 body {
-  width: 100vw;
-  height: 100vh;
-  background-color: #ede2d5;
+  font-family: "Neue Montreal";
+  width: auto;
+  height: auto;
+  background-color: #0f0e0f;
 }
 
 /* Pre-Loader*/
 
 .overlay-container-black {
-  position: relative;
-  width: 100vw;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: black;
+  background-color: #c3c2aa;
+}
+
+.counter-element {
+  position: absolute;
+  bottom: 0;
+  font-size: 6rem;
+  font-family: "Neue Montreal";
+  color: #0f0e0f;
+
+  margin-left: 2rem;
 }
 
 .load-overlay-container {
@@ -26,7 +43,7 @@ body {
   z-index: 99;
   width: 2.5vmax;
   height: 2.5px;
-  background-color: #ede2d5;
+  background-color: #0f0e0f;
 
   position: absolute;
   top: 50%;
@@ -34,22 +51,39 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* Main Content  */
-@font-face {
-  font-family: "Neue Montreal";
-  src: url("../Assets/Fonts/Neue-Montreal/OTF/PPNeueMontreal-Medium.otf");
-}
-@font-face {
-  font-family: "Bebas Neue";
-  src: url("../Assets/Fonts/Bebas-Neue/BebasNeue-Regular.otf");
-}
-@font-face {
-  font-family: "Satoshi";
-  src: url("../Assets/Fonts/Satoshi/Satoshi-Regular.otf");
+/* Header */
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
 }
 
+.logo-container div {
+  color: #c95b00;
+  margin: 2rem 0 0 2rem;
+}
+
+#navigation ul {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2rem;
+}
+
+#navigation ul li {
+  margin: 2rem 0 0 2rem;
+}
+#navigation ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #c95b00;
+}
+
+/* Main Content  */
 #main-content {
-  overflow-x: hidden;
+  position: relative;
+  margin-top: 4rem;
 }
 
 #name,
@@ -60,8 +94,13 @@ body {
 
   display: flex;
   flex-direction: row;
-  justify-content: right;
+
+  margin-left: 2rem;
+  /* 
+  justify-content: right; */
   width: 60vw;
+
+  color: #676b67;
 }
 
 .letterElement {
@@ -69,20 +108,74 @@ body {
   font-size: 10rem;
 }
 
-#name,
-#description {
-  position: relative;
-  overflow: hidden;
+/*  Skills - Container */
+
+.skills-container {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 0.1875rem;
+
+  position: absolute;
+  left: 37.5%;
+  top: 50%;
+}
+.skills-container ul {
+  list-style: none;
 }
 
-#lastName {
-  position: relative;
-  left: 38%;
-  overflow: hidden;
+.skills-container ul li {
+  color: #c3c2aa;
+  font-size: 2rem;
+  text-transform: lowercase;
+}
+/* Coordinates */
+
+.coordinates-container {
+  font-size: 2rem;
+
+  position: absolute;
+  transform: rotateY("90deg");
+  top: 50%;
+  left: 100%;
+
+  transform: rotate(90deg);
+  transform-origin: left top;
+
+  white-space: nowrap;
 }
 
-#description-dev {
-  position: relative;
-  left: 30%;
-  overflow-x: hidden;
+.coordinates-container span {
+  color: #c3c2aa;
+}
+
+/* cta button */
+
+.cta-button-container {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  padding: 2rem;
+  left: 65%;
+  top: 125%;
+  border: 2.5px solid #c3c2aa;
+  border-radius: 50%;
+}
+.cta-button-container::after {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@media (hover: hover) and (pointer: fine) {
+  .cta-button-container:hover {
+    border-color: #3ea88e;
+  }
+  .cta-link:hover {
+    color: blanchedalmond;
+  }
+}
+
+.cta-link {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #c3c2aa;
 }
