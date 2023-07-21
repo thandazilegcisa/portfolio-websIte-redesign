@@ -10,28 +10,28 @@ const mainContent = document.querySelector("#main-content");
 const tl = gsap.timeline();
 
 function runLoader() {
-  let initCounter = 0;
+  let initialCounter = 0;
 
   function upadateLoader() {
-    if (initCounter === 100) return;
+    if (initialCounter === 100) return;
 
-    if (initCounter < 100) {
+    if (initialCounter < 100) {
       mainContent.style.display = "none";
     }
 
-    initCounter += Math.floor(Math.random() * 10) + 1;
+    initialCounter += Math.floor(Math.random() * 10) + 1;
 
-    if (initCounter > 100) {
-      initCounter = 100;
+    if (initialCounter > 100) {
+      initialCounter = 100;
 
-      if (initCounter === 100) {
+      if (initialCounter === 100) {
         mainContent.style.display = "block";
       }
     }
     const delay = Math.floor(Math.random() * 325) + 50;
 
-    overlayContainer.style.width = `${initCounter}vw`;
-    counterElement.textContent = `${initCounter}%`;
+    overlayContainer.style.width = `${initialCounter}vw`;
+    counterElement.textContent = `${initialCounter}%`;
     setTimeout(upadateLoader, delay);
   }
 
@@ -63,13 +63,13 @@ tl.to(overlayContainer, {
 // ! Todo: Generate random colour upon mouseenter
 // ? Place the colours that i want in an array and cycle through that array
 
-let colousArray = ["#FEBC00", "#C95B00", "#0B1915", "#3EA88E", "#BAE7AE"];
+let coloursArray = ["#FEBC00", "#C95B00", "#0B1915", "#3EA88E", "#BAE7AE"];
 
 const textSpan = document.querySelectorAll(".letterElement");
 textSpan.forEach((e) => {
   e.addEventListener("mouseenter", () => {
-    const rndmIndex = Math.floor(Math.random() * colousArray.length) + 1;
-    const rndmColour = colousArray[rndmIndex];
+    const rndmIndex = Math.floor(Math.random() * coloursArray.length) + 1;
+    const rndmColour = coloursArray[rndmIndex];
 
     e.style.cursor = "pointer";
     e.style.color = `${rndmColour}`;

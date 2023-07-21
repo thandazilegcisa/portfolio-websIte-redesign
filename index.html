@@ -11,19 +11,26 @@
     />
     <title>Home Page</title>
     <link rel="stylesheet" href="./Styles/style.css" />
+    <link rel="stylesheet" href="./Styles/landing-section.css">
+    <link rel="stylesheet" href="./Styles/about-section.css">
+    <link rel="stylesheet" href="./Styles/projects-section.css">
+    <link rel="stylesheet" href="./Styles/contact-section.css">
     <script src="./JavaScript/script-loader.js" ></script>
   </head>
   <body>
+
     <!-- Loading Screen Overlay-->
+
     <div class="overlay-container-black">
       <h1 class="counter-element">0</h1>
       <div class="load-overlay-container"></div>
     </div>
 
     <!-- Navigation -->
-    <header class="nav-header">
 
-      <div class="logo-container">
+    <header role="menubar" class="nav-header">
+
+      <div  class="logo-container">
         <div>thandazilegcisa&copy;</div>
       </div>
       <div class="logo-container">
@@ -37,59 +44,85 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
+
     </header>
 
 
     <!-- Main Content -->
-
-    
-
     <main role="main" id="main-content">
+      <!-- Landing Section -->
 
-      <h1 id="name"">
-        <span class="letterElement">T</span>
-        <span class="letterElement">h</span>
-        <span class="letterElement">a</span>
-        <span class="letterElement">n</span>
-        <span class="letterElement">d</span>
-        <span class="letterElement">a</span>
-        <span class="letterElement">z</span>
-        <span class="letterElement">i</span>
-        <span class="letterElement">l</span>
-        <span class="letterElement">e</span>
-      </h1>
-      <h1 id="lastName">
-        <span class="letterElement">G</span>
-        <span class="letterElement">c</span>
-        <span class="letterElement">i</span>
-        <span class="letterElement">s</span>
-        <span class="letterElement">a</span>
-      </h1>
+      <section class="landing-section">
 
-      <div class="skills-container">
-        <ul>
-          <li>User Interface Design</li>
-          <li>User Experience Design</li>
-          <li>Interaction Design</li>
-          <li>Motion</li>
-          <li>Front-End Development</li>
-          <li>User Interface Design</li>
-          <li>User Experience Design</li>
-          <li>Interaction Design</li>
-          <li>Motion</li>
-          <li>Front-End Development</li>
-        </ul>
-      </div>
+        <header>
+          <h1 id="name"">
+            <span class="letterElement">T</span>
+            <span class="letterElement">h</span>
+            <span class="letterElement">a</span>
+            <span class="letterElement">n</span>
+            <span class="letterElement">d</span>
+            <span class="letterElement">a</span>
+            <span class="letterElement">z</span>
+            <span class="letterElement">i</span>
+            <span class="letterElement">l</span>
+            <span class="letterElement">e</span>
+          </h1>
+          <h1 id="lastName">
+            <span class="letterElement">G</span>
+            <span class="letterElement">c</span>
+            <span class="letterElement">i</span>
+            <span class="letterElement">s</span>
+            <span class="letterElement">a</span>
+          </h1>
+          <div class="skills-container">
+            <ul>
+              <li>User Interface Design</li>
+              <li>User Experience Design</li>
+              <li>Interaction Design</li>
+              <li>Motion</li>
+              <li>Front-End Development</li>
+              <li>User Interface Design</li>
+              <li>User Experience Design</li>
+              <li>Interaction Design</li>
+              <li>Motion</li>
+              <li>Front-End Development</li>
+            </ul>
+          </div>
+        </header>
 
-      <div class="coordinates-container">
-        <span>
-          28.0473° E
-        </span>
-      </div>
 
-      <div class="cta-button-container">
-        <a href="#" class="cta-link">thandazilegcisa@gmail.com</a>
-      </div>
+   
+
+        <div class="coordinates-container">
+          <span>
+            28.0473° E
+          </span>
+        </div>
+
+        <div class="cta-button-container">
+          <a href="#" class="cta-link">thandazilegcisa@gmail.com</a>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      
+      <section class="about-section">
+        <header>
+          About Me
+        </header>
+
+        <article role="article" class="about-section-article">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo minus placeat rerum adipisci officiis? Est molestias odio magni numquam, temporibus quam excepturi voluptate animi autem esse eaque totam. Tempore provident fugit iusto architecto, harum consequatur, voluptatibus maiores modi eius ea quae autem ducimus libero id? Sit rem labore non! Atque!
+        </article>
+
+      </section>
+
+      <!--  Projects Section -->
+      <section class="projects-section"></section>
+
+      <!-- Contact Section -->
+      <section class="contact-section"></section>
+
     </main>
 
     <!-- Footer -->
