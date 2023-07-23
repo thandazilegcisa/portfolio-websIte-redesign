@@ -10,9 +10,16 @@
   position: absolute;
   top: 110%;
 
+  opacity: 0;
+  transform: translateY(25%);
+
   margin-top: 10.5rem;
   font: size 32px;
 }
+
+/* .section--hidden {
+  left: -80%;
+} */
 
 .about-section header,
 .about-section article {

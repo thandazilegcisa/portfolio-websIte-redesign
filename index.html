@@ -9,13 +9,13 @@
       name="keywords"
       content="Thandazile Gcisa, Front-End Developer Johannesburg, Digital Designer Johannesburg, Web Designer Johannesburg"
     />
-    <title>Home Page</title>
+    <title>Thandazile Gcisa</title>
+    <script src="./JavaScript/script-loader.js" ></script>
     <link rel="stylesheet" href="./Styles/style.css" />
     <link rel="stylesheet" href="./Styles/landing-section.css">
     <link rel="stylesheet" href="./Styles/about-section.css">
     <link rel="stylesheet" href="./Styles/projects-section.css">
     <link rel="stylesheet" href="./Styles/contact-section.css">
-    <script src="./JavaScript/script-loader.js" ></script>
   </head>
   <body>
 
@@ -30,18 +30,18 @@
 
     <header role="menubar" class="nav-header">
 
-      <div  class="logo-container">
+      <div  class="logo-container nav-element">
         <div>thandazilegcisa&copy;</div>
       </div>
-      <div class="logo-container">
+      <div class="logo-container nav-element">
         <div>designer & front-end developer</div>
       </div>
-      <nav role="navigation" id="navigation">
+      <nav role="navigation" class="nav-element" id="navigation">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="nav-list-item"><a class="nav-link" href="#landing-section">Home</a></li>
+          <li class="nav-list-item"><a class="nav-link" href="#projects-section">Projects</a></li>
+          <li class="nav-list-item"><a class="nav-link" href="#about-section">About</a></li>
+          <li class="nav-list-iten"><a class="nav-link" href="#contact-section">Contact</a></li>
         </ul>
       </nav>
 
@@ -52,7 +52,7 @@
     <main role="main" id="main-content">
       <!-- Landing Section -->
 
-      <section class="landing-section">
+      <section class="landing-section" id="landing-section">
 
         <header>
           <h1 id="name"">
@@ -76,22 +76,19 @@
           </h1>
           <div class="skills-container">
             <ul>
-              <li>User Interface Design</li>
-              <li>User Experience Design</li>
-              <li>Interaction Design</li>
-              <li>Motion</li>
-              <li>Front-End Development</li>
-              <li>User Interface Design</li>
-              <li>User Experience Design</li>
-              <li>Interaction Design</li>
-              <li>Motion</li>
-              <li>Front-End Development</li>
+              <li class="skills-list-item">User Interface Design</li>
+              <li class="skills-list-item">User Experience Design</li>
+              <li class="skills-list-item">Interaction Design</li>
+              <li class="skills-list-item">Motion</li>
+              <li class="skills-list-item">Front-End Development</li>
+              <li class="skills-list-item">User Interface Design</li>
+              <li class="skills-list-item">User Experience Design</li>
+              <li class="skills-list-item">Interaction Design</li>
+              <li class="skills-list-item">Motion</li>
+              <li class="skills-list-item">Front-End Development</li>
             </ul>
           </div>
         </header>
-
-
-   
 
         <div class="coordinates-container">
           <span>
@@ -106,7 +103,7 @@
 
       <!-- About Section -->
       
-      <section class="about-section">
+      <section class="about-section section--hidden" id="about-section">
         <header>
           About Me
         </header>
@@ -118,10 +115,10 @@
       </section>
 
       <!--  Projects Section -->
-      <section class="projects-section"></section>
+      <section class="projects-section" id="projects-section"></section>
 
       <!-- Contact Section -->
-      <section class="contact-section"></section>
+      <section class="contact-section" id="contact-section"></section>
 
     </main>
 

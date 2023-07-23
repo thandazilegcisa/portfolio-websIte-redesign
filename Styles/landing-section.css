@@ -1,7 +1,5 @@
 /* Main Content  */
 #main-content {
-  /* 
-    position: relative; */
   margin-top: 4rem;
 }
 
@@ -15,16 +13,17 @@
   flex-direction: row;
 
   margin-left: 2rem;
-  /* 
-    justify-content: right; */
   width: 60vw;
 
   color: #676b67;
+  position: relative;
+  overflow: hidden;
 }
 
 .letterElement {
   font-family: "Neue Montreal";
   font-size: 10rem;
+  transform: translateY(100%);
 }
 
 /*  Skills - Container */
@@ -49,24 +48,29 @@
   font-size: 2rem;
   text-transform: lowercase;
 }
+.skills-list-item {
+  opacity: 0;
+}
 /* Coordinates */
 
 .coordinates-container {
   font-size: 2rem;
 
   position: absolute;
-  transform: rotateY("90deg");
-  top: 50%;
+  top: 42.5%;
   left: 100%;
 
   transform: rotate(90deg);
   transform-origin: left top;
 
   white-space: nowrap;
+  overflow: hidden;
+
+  opacity: 0;
 }
 
 .coordinates-container span {
-  color: #febc00;
+  color: #c3c2aa;
 }
 
 /* cta button */
@@ -76,21 +80,17 @@
   width: max-content;
   height: max-content;
   padding: 2rem;
-  left: 70%;
-  top: 75%;
-  border: 2.5px solid #3ea88e;
+  left: 75%;
+  top: 85%;
+  border: 2.5px solid #676b67;
   border-radius: 50%;
+
+  box-shadow: inset 0 0 0 0 #3ea88e;
+  transition: 0.3s ease-in-out;
 }
-.cta-button-container::after {
-  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-@media (hover: hover) and (pointer: fine) {
-  .cta-button-container:hover {
-    border-color: #3ea88e;
-  }
-  .cta-link:hover {
-    color: blanchedalmond;
-  }
+.cta-button-container:hover {
+  box-shadow: inset 280px 0 0 0 #3ea88e;
+  cursor: pointer;
 }
 
 .cta-link {

@@ -56,6 +56,12 @@ body {
 .nav-header {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-element {
+  transform: translateY(45%);
 }
 
 .logo-container div {
@@ -78,6 +84,18 @@ body {
   text-decoration: none;
   font-weight: 500;
   color: #c95b00;
+}
+#navigation ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #3ea88e;
+  transition: width 0.2s;
+}
+#navigation ul li a:hover::after {
+  width: 100%;
+  transition: width 0.2s;
 }
 
 .landing-section {
