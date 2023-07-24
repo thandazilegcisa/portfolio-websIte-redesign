@@ -70,7 +70,7 @@
 }
 
 .coordinates-container span {
-  color: #c3c2aa;
+  color: #676b67;
 }
 
 /* cta button */
@@ -97,4 +97,15 @@
   font-size: 1rem;
   text-decoration: none;
   color: #c3c2aa;
+}
+
+/* Arrow: */
+
+.arrow {
+  opacity: 0;
+  & div {
+    color: #676b67;
+    font-size: 15rem;
+    margin-left: 2rem;
+  }
 }
