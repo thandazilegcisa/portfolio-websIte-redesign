@@ -198,3 +198,14 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 
 let targetSection = document.querySelector(".about-section");
 sectionObserver.observe(targetSection);
+
+/* Accordion: */
+
+const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+accordionHeaders.forEach((header) => {
+  header.addEventListener("click", () => {
+    header.nextElementSibling.classList.toggle("show");
+    console.log("clicked");
+  });
+});
