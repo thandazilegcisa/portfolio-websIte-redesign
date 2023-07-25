@@ -1,0 +1,33 @@
+.projects-section {
+  width: 100%;
+  height: 75%;
+  position: absolute;
+  top: 345%;
+  margin-top: 5.5rem;
+  font: size 32px;
+}
+
+.projects-marquee {
+  color: #c3c2aa;
+  border-top: 1px solid #c3c2aa;
+  border-bottom: 1px solid #c3c2aa;
+  overflow: hidden;
+  white-space: wrap;
+  width: 100%;
+}
+.marquee-content {
+  display: inline-block;
+  animation: marquee 80s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* End off-screen to the left */
+  }
+}
+.projects-marquee span {
+  opacity: 0.5;
+  font-size: 5rem;
+}
