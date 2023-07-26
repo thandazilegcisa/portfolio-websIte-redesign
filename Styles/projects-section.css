@@ -1,21 +1,18 @@
 .projects-section {
   width: 100%;
-  height: 75%;
-  position: absolute;
-  top: 345%;
-  margin-top: 5rem;
-  font: size 32px;
+  height: 100%;
+  position: relative;
+  font-size: 32px;
 }
 
 .projects-content {
+  transform: translateY(25%);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin: 5em 0 5em 0;
 }
 
 .projects-header {
-  padding: 1rem;
   display: flex;
   flex-direction: column;
 }
@@ -24,26 +21,44 @@
   font-size: 5rem;
   line-height: 5rem;
   color: #c3c2aa;
-}
-
-.accordion {
-  /* border: 1px solid #ccc; */
+  margin-left: 5rem;
 }
 
 .accordion-header {
   cursor: pointer;
   padding: 10px;
-  font-size: 5rem;
+  font-size: 64px;
   color: #676b67;
-  border-top: 1px solid #c3c2aa;
+  border-bottom: 1px solid #c95a00e9;
 }
 
 .accordion-content {
   display: none;
   padding: 10px;
 }
+
 .accordion-content.show {
   display: block;
   background-color: transparent;
+  color: #c3c2aa;
+}
+.used-skills {
+  font-size: 1rem;
+  padding: 2rem 0 2rem 0;
+}
+
+.text-content-wrapper {
+  padding: 2rem 0 2rem 0;
+}
+
+.link-to-live {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.link-to-live a {
+  font-size: 1rem;
   color: #c3c2aa;
 }

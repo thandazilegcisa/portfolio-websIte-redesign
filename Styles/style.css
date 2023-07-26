@@ -27,7 +27,7 @@ body {
   font-family: "Neue Montreal";
   width: auto;
   height: auto;
-  background-color: #0f0e0f;
+  background-color: #1e1e1e;
   display: block;
 }
 
@@ -57,12 +57,33 @@ body {
   z-index: 99;
   width: 2.5vmax;
   height: 2.5px;
-  background-color: #0f0e0f;
+  background-color: #1e1e1e;
 
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* Structure Overview */
+
+.page-parent-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+
+  margin: 1em 2em 1em 0;
+}
+
+section {
+  flex: 1;
 }
 
 /* Header */

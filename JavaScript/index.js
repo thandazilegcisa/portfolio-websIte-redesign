@@ -5,7 +5,7 @@
 const overlayContainer = document.querySelector(".load-overlay-container");
 const overlayBlack = document.querySelector(".overlay-container-black");
 const counterElement = document.querySelector(".counter-element");
-const mainContent = document.querySelector("#main-content");
+const parentPageWrapper = document.querySelector(".page-parent-wrapper");
 
 const tl = gsap.timeline();
 
@@ -19,9 +19,9 @@ function runLoader() {
 
     if (initialCounter > 95) {
       initialCounter = 100;
-      mainContent.style.display = "block";
+      parentPageWrapper.style.display = "block";
     } else {
-      mainContent.style.display = "none";
+      parentPageWrapper.style.display = "none";
     }
 
     const delay = Math.floor(Math.random() * 325) + 50;
@@ -34,9 +34,7 @@ function runLoader() {
   upadateLoader();
 }
 
-window.addEventListener("load", runLoader(), function () {
-  mainContent.style.display = "block";
-});
+window.addEventListener("load", runLoader());
 
 // Overylay Animations : //
 
@@ -153,6 +151,13 @@ const liveElement = document.querySelector(".live-element");
 const byElement = document.querySelector("by-element");
 const subTextContainer = document.querySelector(".text-container");
 
+/* Text Blocks */
+
+const subBlockOne = document.querySelector(".text-block-one");
+const subBlockTwo = document.querySelector(".text-block-two");
+
+const projectsContent = document.querySelector(".projects-content");
+
 const revealSection = (entries, observer) => {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
@@ -160,44 +165,88 @@ const revealSection = (entries, observer) => {
   const abtTimeline = gsap.timeline();
 
   abtTimeline.to(targetSection, {
-    delay: 0.25,
+    delay: 0,
     opacity: 1,
-    transform: "translateY(0%)",
+    y: 0,
     duration: 0.5,
     ease: "power1.out",
   }),
-    abtTimeline.to(subTextContainer, {
-      left: "45%",
-      opacity: 1,
-      duration: 1,
-      ease: "power2.inOut",
-    }),
     abtTimeline.to(valuesElement, {
+      delay: 0,
       x: "95%",
       duration: 0.45,
       ease: "power1.out",
     }),
+    abtTimeline.to(subTextContainer, {
+      delay: 0,
+      left: "50%",
+      opacity: 1,
+      duration: 1,
+      ease: "power2.inOut",
+    }),
     abtTimeline.to(eyeElement, {
+      delay: 0,
       x: "75%",
       duration: 0.55,
       ease: "power1.out",
     }),
     abtTimeline.to(liveElement, {
+      delay: 0,
       x: "50%",
       duration: 0.65,
       ease: "power1.out",
+    }),
+    abtTimeline.to(subBlockOne, {
+      delay: 0.5,
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power2.easeIn",
+    }),
+    abtTimeline.to(subBlockTwo, {
+      delay: 0,
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power2.easeIn",
     });
   observer.unobserve(targetSection);
 };
 
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.45,
-  rootMargin: "168px",
+  threshold: 0.1,
+  rootMargin: "50px",
 });
 
 let targetSection = document.querySelector(".about-section");
 sectionObserver.observe(targetSection);
+
+/* Projects Observer: */
+
+const revealProjects = (entries, observer) => {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+
+  /* const projectsTimeline = gsap.timeline(); */
+  gsap.to(projectsSection, {
+    delay: 0.25,
+    y: 0,
+    duration: 1,
+    ease: "power2.easeIn",
+  });
+
+  /*  observer.unobserve(projectsSection); */
+};
+
+const projectsObserver = new IntersectionObserver(revealProjects, {
+  root: null,
+  threshold: 0.1,
+  rootMargin: "80px",
+});
+
+let projectsSection = document.querySelector(".projects-content");
+projectsObserver.observe(projectsSection);
 
 /* Accordion: */
 
