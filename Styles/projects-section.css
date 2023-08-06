@@ -29,7 +29,13 @@
   padding: 10px;
   font-size: 64px;
   color: #676b67;
-  border-bottom: 1px solid #c95a00e9;
+  border-bottom: 2.5px solid #c95a00e9;
+  transition: text-decoration 10s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.accordion-header:hover {
+  text-decoration: line-through;
+  transition: text-decoration 100s cubic-bezier(0.845, 0.045, 0.355, 1);
 }
 
 .accordion-content {

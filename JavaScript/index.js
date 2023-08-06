@@ -195,7 +195,9 @@ const revealSection = (entries, observer) => {
       x: "50%",
       duration: 0.65,
       ease: "power1.out",
-    }),
+    });
+
+  if (sectionObserver.threshold > 0.5) {
     abtTimeline.to(subBlockOne, {
       delay: 0.5,
       y: 0,
@@ -203,13 +205,16 @@ const revealSection = (entries, observer) => {
       duration: 1,
       ease: "power2.easeIn",
     }),
-    abtTimeline.to(subBlockTwo, {
-      delay: 0,
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      ease: "power2.easeIn",
-    });
+      abtTimeline.to(subBlockTwo, {
+        delay: 0,
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.easeIn",
+      });
+
+    console.log(`Section threshold is ${sectionObserver.threshold}`);
+  }
   observer.unobserve(targetSection);
 };
 
@@ -236,7 +241,7 @@ const revealProjects = (entries, observer) => {
     ease: "power2.easeIn",
   });
 
-  /*  observer.unobserve(projectsSection); */
+  observer.unobserve(projectsSection);
 };
 
 const projectsObserver = new IntersectionObserver(revealProjects, {
